@@ -1,0 +1,43 @@
+-
+  name: 压气机性能监测与预测接口001
+  request:
+    url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+    method: get
+    params:
+      pts[]:
+  assert:
+    status code: 200
+    info: 参数类型不能为空
+
+-
+  name: 压气机性能监测与预测接口002
+  request:
+    url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+    method: get
+    params:
+      pts[]: 70695398-4f90-4643-b819-c2be5ea12992
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 压气机性能监测与预测接口003
+  request:
+    url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+    method: get
+    params:
+      pts[]: 70695398-4f90-4643-0695398-4f90-46
+  assert:
+    status code: 200
+    info: 参数类型不正确
+
+-
+  name: 压气机性能监测与预测接口004
+  request:
+    url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+    method: get
+    params:
+      pts[]: 5e137e04-8e6e-4033-a0c8-59a5c208d38c
+  assert:
+    status code: 200
+    info:

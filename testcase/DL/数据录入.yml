@@ -1,0 +1,92 @@
+-
+  name: 数据录入接口001
+  url: http://192.168.1.180:23021/dl/inputFile/addFileSave
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    originalName: C:/Users/suqiang/Desktop.csv
+    modifyName: testcase
+    engineId: HS10016
+    fileLable: 已修改
+    fileRemark: 文件名修改成功
+  info:
+  assert:
+    status code: 200
+    ok: TRUE
+    error: null
+
+-
+  name: 数据录入接口002
+  url: http://192.168.1.180:23021/dl/inputFile/addFileSave
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    originalName: C:/Users/suqiang/Desktop.csv
+    modifyName: case
+    engineId: HS10016
+    fileLable:
+    fileRemark:
+  info:
+  assert:
+    status code: 200
+    ok: TRUE
+    error: null
+
+-
+  name: 数据录入接口003
+  url: http://192.168.1.180:23021/dl/inputFile/addFileSave
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    originalName:
+    modifyName: case
+    engineId: HS10016
+    fileLable: 已修改
+    fileRemark: 文件名修改成功
+  info: 原文件名不能为空
+  assert:
+    status code: 200
+    ok: FALSE
+    error:
+      - code: params_invalid
+        data: null
+        message: 添加失败！！！
+
+-
+  name: 数据录入接口004
+  url: http://192.168.1.180:23021/dl/inputFile/addFileSave
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    originalName: C:/Users/suqiang/Desktop.csv
+    modifyName:
+    engineId: HS10016
+    fileLable: 已修改
+    fileRemark: 文件名修改成功
+  info: 新文件名不能为空
+  assert:
+    status code: 200
+    ok: TRUE
+    error: null
+
+-
+  name: 数据录入接口005
+  url: http://192.168.1.180:23021/dl/inputFile/addFileSave
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    originalName: C:/Users/suqiang/Desktop.csv
+    modifyName: case
+    engineId:
+    fileLable: 已修改
+    fileRemark: 文件名修改成功
+  info: 发动机编号不能为空
+  assert:
+    status code: 200
+    ok: TRUE
+    error: null

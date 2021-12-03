@@ -1,0 +1,36 @@
+[2021-11-04 16:30:47,646] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,651] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口001
+[2021-11-04 16:30:47,655] [logger.py|__console] [line:34] INFO: 执行用时：0.051179秒
+[2021-11-04 16:30:47,658] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：200 , 实际返回：200
+[2021-11-04 16:30:47,662] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：True , 实际返回：True
+[2021-11-04 16:30:47,666] [logger.py|__console] [line:34] INFO: 用例测试通过
+[2021-11-04 16:30:47,718] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,734] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口002
+[2021-11-04 16:30:47,752] [logger.py|__console] [line:34] INFO: 执行用时：0.047726秒
+[2021-11-04 16:30:47,756] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：200 , 实际返回：200
+[2021-11-04 16:30:47,759] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：True , 实际返回：True
+[2021-11-04 16:30:47,763] [logger.py|__console] [line:34] INFO: 用例测试通过
+[2021-11-04 16:30:47,814] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,819] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口003
+[2021-11-04 16:30:47,823] [logger.py|__console] [line:34] INFO: 执行用时：0.047853秒
+[2021-11-04 16:30:47,826] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：200 , 实际返回：200
+[2021-11-04 16:30:47,830] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：True , 实际返回：True
+[2021-11-04 16:30:47,834] [logger.py|__console] [line:34] INFO: 用例测试通过
+[2021-11-04 16:30:47,857] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,861] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口004
+[2021-11-04 16:30:47,865] [logger.py|__console] [line:34] INFO: 执行用时：0.019466秒
+[2021-11-04 16:30:47,869] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：500 , 实际返回：500
+[2021-11-04 16:30:47,873] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：Internal Server Error , 实际返回：Internal Server Error
+[2021-11-04 16:30:47,876] [logger.py|__console] [line:34] INFO: 用例测试通过
+[2021-11-04 16:30:47,887] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,892] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口005
+[2021-11-04 16:30:47,896] [logger.py|__console] [line:34] INFO: 执行用时：0.00706秒
+[2021-11-04 16:30:47,900] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：200 , 实际返回：200
+[2021-11-04 16:30:47,903] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：True , 实际返回：True
+[2021-11-04 16:30:47,907] [logger.py|__console] [line:34] INFO: 用例测试通过
+[2021-11-04 16:30:47,931] [logger.py|__console] [line:38] WARNING: -----------------------------------------------------
+[2021-11-04 16:30:47,936] [logger.py|__console] [line:34] INFO: 当前测试的用例是：性能趋势分析接口006
+[2021-11-04 16:30:47,940] [logger.py|__console] [line:34] INFO: 执行用时：0.021034秒
+[2021-11-04 16:30:47,944] [logger.py|__console] [line:36] DEBUG: 开始校验code状态码：-> 预期返回：500 , 实际返回：500
+[2021-11-04 16:30:47,948] [logger.py|__console] [line:36] DEBUG: 开始校验data返回值：-> 预期返回：Internal  Error , 实际返回：Internal Server Error
+[2021-11-04 16:30:47,952] [logger.py|__console] [line:40] ERROR: 用例测试失败

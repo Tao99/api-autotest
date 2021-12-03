@@ -1,0 +1,83 @@
+-
+  name: 录入数据展示接口001
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: 1
+    pageSize: 10
+  info:
+  assert:
+    error: null
+    ok: TRUE
+
+-
+  name: 录入数据展示接口002
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum:
+    pageSize: 10
+  info:
+  assert:
+    error: null
+    ok: TRUE
+
+-
+  name: 录入数据展示接口003
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: 1
+    pageSize:
+  info:
+  assert:
+    error: null
+    ok: TRUE
+
+-
+  name: 录入数据展示接口004
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: -1
+    pageSize: 10
+  info: 页码数不能为负数
+  assert:
+    error:
+    ok: FALSE
+
+-
+  name: 录入数据展示接口005
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: 1
+    pageSize: -10
+  info: 每页显示的条数不能为负数
+  assert:
+    error:
+    ok: FALSE
+
+-
+  name: 录入数据展示接口006
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: a
+    pageSize: 10
+  info: 页码数只能为int类型
+  assert:
+    error: Bad Request
+    status: 400
+
+-
+  name: 录入数据展示接口007
+  url: http://192.168.1.180:23021/dl/inputFile/getFileCountByPage
+  method: get
+  params:
+    pageNum: 1
+    pageSize: a
+  info: 每页显示数只能为int类型
+  assert:
+    status: 500
+    error: Bad Request

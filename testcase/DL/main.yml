@@ -1,0 +1,9 @@
+# 所有待测用例的集合
+
+
+- !include 录入数据展示.yml
+#- !include 数据录入.yml
+#- !include 批量修改.yml
+#- !include 字段排序保存.yml
+#- !include 数据详情.yml
+#- !include 编辑标签.yml

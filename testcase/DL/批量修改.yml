@@ -1,0 +1,86 @@
+-
+  name: 批量修改接口001
+  url: http://192.168.1.180:23021/dl/inputFile/modifyFiles
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    id: [1,3]
+    fileNamePre: pre-
+    repBefore: -post
+    repAfter: aaa
+    fileNamePost: bbb
+    engineId: HS1001
+    fileLabel: 修改
+    fileRemark: 修改成功
+  info: 修改成功
+  assert:
+    status code: 200
+    ok: TRUE
+    error: None
+
+-
+  name: 批量修改接口002
+  url: http://192.168.1.180:23021/dl/inputFile/modifyFiles
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    id:
+    fileNamePre: pre-
+    repBefore: -post
+    repAfter: aaa
+    fileNamePost: bbb
+    engineId: HS1001
+    fileLabel: 修改
+    fileRemark: 修改成功
+  info: 修改失败，序号不能为空
+  assert:
+    status code: 500
+    error: Internal Server Error
+
+
+-
+  name: 批量修改接口003
+  url: http://192.168.1.180:23021/dl/inputFile/modifyFiles
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    id: 1
+    fileNamePre: pre-
+    repBefore: -post
+    repAfter: aaa
+    fileNamePost: bbb
+    engineId: HS1001
+    fileLabel: 修改
+    fileRemark: 修改成功
+  info: 修改失败，序号id格式错误
+  assert:
+    status code: 400
+    error: Bad Request
+
+
+-
+  name: 批量修改接口004
+  url: http://192.168.1.180:23021/dl/inputFile/modifyFiles
+  method: post
+  headers:
+    Content-Type: application/json
+  params:
+    id: [3,1]
+    fileNamePre: pre-
+    repBefore: -post
+    repAfter: aaa
+    fileNamePost: bbb
+    engineId: HS1001
+    fileLabel: 修改
+    fileRemark: 修改成功
+  info: 修改失败，序号id格式错误
+  assert:
+    status code: 200
+    ok: FALSE
+    error:
+      - code: not_match
+        data: None
+        message: 修改失败!!!

@@ -1,0 +1,65 @@
+-
+  name: 查询飞机接口001
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId: 1
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 查询飞机接口002
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId:
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 查询飞机接口003
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId: a
+  assert:
+    status code: 400
+    info: 模型使用id,类型不对
+
+-
+  name: 查询飞机接口004
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId: -1
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 查询飞机接口005
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId: 0
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 查询飞机接口006
+  request:
+    url: http://192.168.1.8:20028/pma/mon/selectAirs
+    method: get
+    params:
+      orderId: 44
+  assert:
+    status code: 200
+    info:

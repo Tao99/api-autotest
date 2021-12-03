@@ -1,0 +1,54 @@
+-
+  name: 振动监测接口001
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectCompressParam
+    method: get
+    params:
+      engineId: -3
+  assert:
+    status code: 200
+    info: 发动机id不能为负数
+
+-
+  name: 振动监测接口002
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectCompressParam
+    method: get
+    params:
+      engineId:
+  assert:
+    status code: 200
+    info: 发动机id不能为空
+
+-
+  name: 振动监测接口003
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectCompressParam
+    method: get
+    params:
+      engineId: 10
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 振动监测接口004
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectCompressParam
+    method: get
+    params:
+      engineId: 18
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 振动监测接口005
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectCompressParam
+    method: get
+    params:
+      engineId: id
+  assert:
+    status code: 200
+    info: 发动机id格式不正确

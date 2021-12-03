@@ -1,0 +1,51 @@
+-
+  name: 文件数据详情接口001
+  url: http://192.168.1.180:23021/dl/dataBase/getFileShow
+  method: get
+  params:
+    id: 2
+    pageNum: 1
+    pageSize: 10
+  info: 修改成功
+  assert:
+    status code: 200
+    ok: TRUE
+
+-
+  name: 文件数据详情接口002
+  url: http://192.168.1.180:23021/dl/dataBase/getFileShow
+  method: get
+  params:
+    id:
+    pageNum: 1
+    pageSize: 10
+  info: 修改成功
+  assert:
+    status code: 200
+    ok: TRUE
+
+-
+  name: 文件数据详情接口003
+  url: http://192.168.1.180:23021/dl/dataBase/getFileShow
+  method: get
+  params:
+    id: 2
+    pageNum:
+    pageSize: 10
+  info: 修改成功
+  assert:
+    status code: 200
+    ok: TRUE
+
+-
+  name: 文件数据详情接口004
+  url: http://192.168.1.180:23021/dl/dataBase/getFileShow
+  method: get
+  params:
+    id: 2
+    pageNum: 1
+    pageSize:
+  info: 每页显示条数pageSize不能为空
+  assert:
+    status code: 200
+    ok: TRUE

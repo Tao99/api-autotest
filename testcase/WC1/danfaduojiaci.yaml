@@ -1,0 +1,78 @@
+-
+  name: 单发多架次稳态参数查询接口001
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      engineId: 10
+      sortieInfo: 4
+      stateId: 2
+      paramId: 4
+      inputBatchNo: 20210605-003
+  assert:
+    status code: 200
+-
+  name: 单发多架次稳态参数查询接口002
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531-010
+      engineId: 98
+      stateId: 2
+      paramId: 29
+      sortieInfo: 20
+  assert:
+    status code: 200
+-
+  name: 单发多架次稳态参数查询接口003
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531-300
+      engineId:
+      stateId: 170
+      paramId: 4
+      sortieInfo: 20
+  assert:
+    status code: 200
+-
+  name: 单发多架次稳态参数查询接口004
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531-010
+      engineId: 62
+      stateId: 3
+      paramId: 280
+      sortieInfo:
+  assert:
+    status code: 200
+-
+  name: 单发多架次稳态参数查询接口005
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531-100
+      engineId: 10
+      stateId: 3
+      paramId: 6
+      sortieInfo: 4
+  assert:
+    status code: 200
+-
+  name: 单发多架次稳态参数查询接口006
+  request:
+    url: http://192.168.1.8:21019/v4/das/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531010
+      engineId: 10
+      stateId: 3
+      paramId: 3
+      sortieInfo: 5
+  assert:
+    status code: 200

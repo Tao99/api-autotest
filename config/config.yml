@@ -1,0 +1,19 @@
+Tester: Tao
+
+
+email:
+  username_send: l.tao@hang-shu.com
+  pwd_send: Aa123456
+  username_received:
+    - l.tao@hang-shu.com
+    - xx@hang-shu.com
+    - xxxx@hang-shu.com
+  email_server: smtp.hang-shu.com
+
+
+database:
+  host: 192.168.1.8
+  user: Hsapi
+  passwd: Hsapi-2016
+  database: hs_dl
+  port: 21020

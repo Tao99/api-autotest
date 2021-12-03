@@ -1,0 +1,66 @@
+-
+  name: 性能趋势分析接口001
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]: f4618f38-e09c-4fba-83fc-b6bdf618f58a
+  assert:
+    status code: 200
+    ok: true
+    info:
+
+-
+  name: 性能趋势分析接口002
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]: 5e137e04-8e6e-4033-a0c8-59a5c208d38c
+  assert:
+    status code: 200
+    ok: true
+    info:
+
+-
+  name: 性能趋势分析接口003
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]: 9c3437a7-ddc5-4783-8e5d-2b471a2e655c
+  assert:
+    status code: 200
+    ok: true
+    info:
+
+-
+  name: 性能趋势分析接口004
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]: f4618f38-e09c-4fba
+  assert:
+    status code: 500
+    error: Internal Server Error
+    info: 参数类型格式不对
+
+
+-
+  name: 性能趋势分析接口005
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]:
+  assert:
+    status code: 200
+    ok: true
+    info: 参数类型不能为空
+
+-
+  name: 性能趋势分析接口006
+  url: http://192.168.1.8:20028/drawing-compose-x1/getMonitorTrain
+  method: get
+  params:
+    pts[]: f4618f38-e09c-4fba-83fc-000000000000
+  assert:
+    status code: 500
+    error: Internal  Error
+    info: 参数类型错误

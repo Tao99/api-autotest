@@ -1,0 +1,66 @@
+-
+  name: 气路监测接口001
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId: 0
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 气路监测接口002
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId: 18
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 气路监测接口003
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId: 1400
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 气路监测接口004
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId: 1700
+  assert:
+    status code: 200
+    info:
+
+-
+  name: 气路监测接口005
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId:
+  assert:
+    status code: 400
+    error: Bad Request
+    info: 发动机Id不能为空
+
+-
+  name: 气路监测接口006
+  request:
+    url: http://192.168.1.8:20028/pma/param/selectT45TongJi
+    method: get
+    params:
+      engineId: engineId
+  assert:
+    status code: 200
+    info: 发动机Id格式不对

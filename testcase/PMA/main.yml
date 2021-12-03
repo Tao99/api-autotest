@@ -1,0 +1,16 @@
+
+- !include 性能趋势分析.yml
+
+#- !include 气路监测.yml
+
+#- !include 压气机性能监测与预测.yml
+
+#- !include 燃气涡轮叶片损伤分析.yml
+
+#- !include 振动监测.yml
+
+#- !include 查询飞机.yml
+
+#- !include 查询发动机.yml
+
+#- !include 查询参数.yml

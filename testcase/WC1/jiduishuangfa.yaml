@@ -1,0 +1,48 @@
+-
+  name: 机队双发差异汇总查询接口001
+  request:
+    url: http://192.168.1.8:21019/v4/dif/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210531-010
+      airId: 6
+      stateId: 3
+      paramId: 4
+  assert:
+    status code: 200
+-
+  name: 机队双发差异汇总查询接口002
+  request:
+    url: http://192.168.1.8:21019/v4/dif/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210605-100
+      airId: 100
+      stateId: 3
+      paramId: 4
+  assert:
+    status code: 200
+-
+  name: 机队双发差异汇总查询接口003
+  request:
+    url: http://192.168.1.8:21019/v4/dif/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210605-002
+      airId: 6
+      stateId: 201
+      paramId: 4
+  assert:
+    status code: 200
+-
+  name: 机队双发差异汇总查询接口004
+  request:
+    url: http://192.168.1.8:21019/v4/dif/selectMoreVehicles
+    method: get
+    params:
+      inputBatchNo: 20210605-002
+      airId: 6
+      stateId: 20
+      paramId:
+  assert:
+    status code: 200

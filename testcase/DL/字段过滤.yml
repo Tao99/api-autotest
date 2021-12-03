@@ -1,0 +1,9 @@
+-
+  name: 字段过滤接口001
+  url: http://192.168.1.180:23021/dl/dataBase/fieldSort
+  method: get
+  params:
+  info:
+  assert:
+    status code: 200
+    ok: TRUE
