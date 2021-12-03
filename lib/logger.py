@@ -10,9 +10,8 @@ class Logger(object):
     """
     终端打印不同颜色的日志，在pycharm中如果强行规定了日志的颜色， 这个方法不会起作用， 但是
     对于终端，这个方法是可以打印不同颜色的日志的。
+    在这里定义StreamHandler，可以实现单例， 所有的logger()共用一个StreamHandler
     """
-
-    # 在这里定义StreamHandler，可以实现单例， 所有的logger()共用一个StreamHandler
     ch = logging.StreamHandler()
 
     def __init__(self):
@@ -41,36 +40,39 @@ class Logger(object):
             self.logger.error(message)
 
         # 避免日志输出重复问题
-        self.logger.removeHandler(ch)
         self.logger.removeHandler(fh)
         # 关闭打开的文件
         fh.close()
 
     def debug(self, message):
-        self.set_color_formatter('\033[0;34m%s\033[0m')
+        self.set_color_formatter('\033[1;35m%s\033[0m')
         self.logger.debug(message)
 
     def info(self, message):
-        self.set_color_formatter('\033[0;32m%s\033[0m')
+        self.set_color_formatter('\033[1;32m%s\033[0m')
         self.logger.info(message)
 
     def warning(self, message):
-        self.set_color_formatter('\033[0;33m%s\033[0m')
+        self.set_color_formatter('\033[1;33m%s\033[0m')
         self.logger.warning(message)
 
     def error(self, message):
-        self.set_color_formatter('\033[0;35m%s\033[0m')
+        self.set_color_formatter('\033[1;31m%s\033[0m')
         self.logger.error(message)
-
-    def critical(self, message):
-        self.set_color_formatter('\033[0;31m%s\033[0m')
-        self.logger.critical(message)
 
     def set_color_formatter(self, color):
         # 不同的日志输出不同的颜色
-        formatter = logging.Formatter(color % self.formatter)
+        formatter = logging.Formatter(color % '[%(asctime)s][line:%(lineno)d] %(levelname)-8s : %(message)s')
         self.ch.setFormatter(formatter)
-        self.ch.setLevel(logging.INFO)
-        self.logger.addHandler(self.ch)
+        self.ch.setLevel(logging.DEBUG)
+        if not self.logger.handlers:
+            self.logger.addHandler(self.ch)
+
 
 log = Logger()
+
+if __name__ == '__main__':
+    log.error(123)
+    log.info(123)
+    log.warning(123)
+    log.debug(123)
